@@ -6,6 +6,8 @@ html {
   justify-content: center;
   align-items: center;
 }
+
+
 html::before {
   content: "";
   position: absolute;
@@ -649,6 +651,9 @@ body.dark-mode .hamburger span {
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
+  html {
+    display: block;
+  }
   /* Show hamburger menu button */
   #mobile-menu-button {
     display: block;
