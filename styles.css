@@ -814,3 +814,61 @@ body.dark-mode .hamburger span {
     height: 20px;
   }
 }
+
+/* Tablet Responsive Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Adjust navigation paddings for a balanced layout */
+  #logo-container {
+    padding: 20px 150px;
+  }
+  #nav-list {
+    padding: 20px 150px;
+  }
+
+  /* Scale down the intro text sizes slightly for tablets */
+  #self-intro h1 {
+    font-size: 3.5rem;
+  }
+  #self-intro p {
+    font-size: 1.3rem;
+  }
+
+  /* Adjust About section spacing and button dimensions */
+  #about {
+    padding: 10vh;
+    max-width: 90%;
+    height: auto;
+  }
+  #about .cv-button {
+    width: 250px;
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  /* Adjust Projects section spacing and button dimensions */
+  #projects {
+    padding: 10vh;
+    max-width: 90%;
+    height: auto;
+    text-align: center;
+  }
+  #projects .projects-button {
+    width: 250px;
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  .projects-container {
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  /* Adjust Contact section dimensions */
+  #contact {
+    padding: 10vh;
+  }
+  #contact .contact-form-container,
+  #contact .contact-card {
+    width: 350px;
+    height: auto;
+  }
+}
