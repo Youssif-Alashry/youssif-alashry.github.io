@@ -5,10 +5,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  width:100%;
 }
-
-
 html::before {
   content: "";
   position: absolute;
@@ -630,7 +627,6 @@ body.dark-mode #projects .title-underline {
   padding: 1rem;
   margin-right: 1rem;
 }
-
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -638,34 +634,21 @@ body.dark-mode #projects .title-underline {
   width: 25px;
   height: 20px;
 }
-
 .hamburger span {
   display: block;
   width: 100%;
   height: 3px;
   background: #fff;
 }
-
 body.dark-mode .hamburger span {
   background: #101010;
 }
-
-/* Mobile Responsive Styles */
 @media (max-width: 768px) {
-  html {
-    display: block;
-  }
-  /* Show hamburger menu button */
-  #mobile-menu-button {
-    display: block;
-  }
   #navbar {
-    box-sizing: border-box;
     left: 0;
     right: 0;
     width: 100%;
-    max-width: 100%;
-    padding: 0 1rem;
+    box-sizing: border-box;
   }
   body {
     overflow-x: hidden;
@@ -677,20 +660,26 @@ body.dark-mode .hamburger span {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
+    right: 0;            /* Ensures it spans from left to right */
+    z-index: 999;        /* Brings it above other elements if needed */
     background: #000;
     display: flex;
     flex-direction: column;
     padding: 0;
-    max-height: 0;
+    max-height: 0;       /* Collapsed by default */
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     gap: 10px;
   }
-  /* When toggled, the active class should expand the menu */
   #nav-list.active {
-    max-height: 300px;
+    max-height: 300px;   /* Adjust height if needed */
   }
+  /* Ensure the mobile menu button is visible */
+  #mobile-menu-button {
+    display: block;
+  }
+
+
   .nav-button {
     display: flex;
     align-items: center;
@@ -813,8 +802,6 @@ body.dark-mode .hamburger span {
     margin: 0 auto;
   }
 }
-
-/* Extra Small Mobile */
 @media (max-width: 480px) {
   #self-intro h1 {
     font-size: 2.5rem;
@@ -829,54 +816,5 @@ body.dark-mode .hamburger span {
   .socialButton svg {
     width: 20px;
     height: 20px;
-  }
-}
-
-/* Tablet Responsive Styles */
-@media (min-width: 769px) and (max-width: 1024px) {
-  #logo-container {
-    padding: 20px 150px;
-  }
-  #nav-list {
-    padding: 20px 150px;
-  }
-  #self-intro h1 {
-    font-size: 3.5rem;
-  }
-  #self-intro p {
-    font-size: 1.3rem;
-  }
-  #about {
-    padding: 10vh;
-    max-width: 90%;
-    height: auto;
-  }
-  #about .cv-button {
-    width: 250px;
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
-  #projects {
-    padding: 10vh;
-    max-width: 90%;
-    height: auto;
-    text-align: center;
-  }
-  #projects .projects-button {
-    width: 250px;
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
-  .projects-container {
-    gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  #contact {
-    padding: 10vh;
-  }
-  #contact .contact-form-container,
-  #contact .contact-card {
-    width: 350px;
-    height: auto;
   }
 }
