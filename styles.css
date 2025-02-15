@@ -643,12 +643,15 @@ body.dark-mode #projects .title-underline {
 body.dark-mode .hamburger span {
   background: #101010;
 }
+
 @media (max-width: 768px) {
   #navbar {
     left: 0;
     right: 0;
     width: 100%;
     box-sizing: border-box;
+    /* Added padding to prevent overflow from the right */
+    padding: 0 1rem;
   }
   body {
     overflow-x: hidden;
